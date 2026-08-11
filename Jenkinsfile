@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    DOCKER_IMAGE  = "gopikakt2005/fast-service"
+    DOCKER_IMAGE  = "gopikakt2005/fastapi-service"
     GIT_REPO_NAME = "helloworld"
     GIT_USER_NAME = "gopikakt2005"
   }
