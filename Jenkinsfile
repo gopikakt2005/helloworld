@@ -3,7 +3,7 @@ pipeline {
 
   environment {
     DOCKER_IMAGE  = "gopikakt2003/project-fastapi"
-    GIT_REPO_NAME = "project-fastapi"
+    GIT_REPO_NAME = "helloworld"
     GIT_USER_NAME = "gopikakt2005"
   }
 
