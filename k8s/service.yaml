@@ -3,12 +3,15 @@ kind: Service
 metadata:
   name: fastapi-service
   namespace: default
+
 spec:
-  type: Nodeport
+  type: NodePort
+
   selector:
-    app: fastapi
+    app: project-fastapi
+
   ports:
-  - port: 80
-    targetPort: 8000
-    protocol: TCP
-    nodeport: 30081
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
+      nodePort: 30081
