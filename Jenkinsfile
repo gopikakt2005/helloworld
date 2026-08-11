@@ -2,8 +2,8 @@ pipeline {
   agent any
 
   environment {
-    DOCKER_IMAGE  = "gopikakt2005/fastapi-service"
-    GIT_REPO_NAME = "helloworld"
+    DOCKER_IMAGE  = "gopikakt2003/project-fastapi"
+    GIT_REPO_NAME = "project-fastapi"
     GIT_USER_NAME = "gopikakt2005"
   }
 
@@ -12,18 +12,18 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '10'))
   }
 
-  stages {
+    stages {
     stage('Checkout') {
       steps {
-        sh 'echo checkout successfull'
-       // git branch: 'main', url: 'https://github.com/Doom710/python-flask-app'
+        sh 'echo "Checkout successfull"' 
+        //git branch: 'main', url: 'https://github.com/Doom710/python-flask-app'
       }
     }
 
     stage('SonarQube Analysis') {
       steps {
         script {
-          def scannerHome = tool 'sonarscanner'
+          def scannerHome = tool 'SonarScanner'
           withSonarQubeEnv('sonarqube') {
             sh """
               ${scannerHome}/bin/sonar-scanner \\
