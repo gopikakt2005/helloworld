@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: container
-        image: gopikakt2005/fast-service:1
+        image: gopikakt2005/fastapi-service:1
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
